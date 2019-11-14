@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DB61269-081B-4318-83D6-CBC8F58272D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppInv</RootNamespace>
+    <AssemblyName>AppInv</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net46\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>packages\RabbitMQ.Client.5.1.2\lib\net451\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZthotelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZthotelDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZthotelDataSet9.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ZthotelDataSet.xsc">
+      <DependentUpon>ZthotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet.xss">
+      <DependentUpon>ZthotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet1.xsc">
+      <DependentUpon>ZthotelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet1.xss">
+      <DependentUpon>ZthotelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet10.xsc">
+      <DependentUpon>ZthotelDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet10.xss">
+      <DependentUpon>ZthotelDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet11.xsc">
+      <DependentUpon>ZthotelDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet11.xss">
+      <DependentUpon>ZthotelDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet12.xsc">
+      <DependentUpon>ZthotelDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet12.xss">
+      <DependentUpon>ZthotelDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet13.xsc">
+      <DependentUpon>ZthotelDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet13.xss">
+      <DependentUpon>ZthotelDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet14.xsc">
+      <DependentUpon>ZthotelDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet14.xss">
+      <DependentUpon>ZthotelDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet15.xsc">
+      <DependentUpon>ZthotelDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet15.xss">
+      <DependentUpon>ZthotelDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet2.xsc">
+      <DependentUpon>ZthotelDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet2.xss">
+      <DependentUpon>ZthotelDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet3.xsc">
+      <DependentUpon>ZthotelDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet3.xss">
+      <DependentUpon>ZthotelDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet4.xsc">
+      <DependentUpon>ZthotelDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet4.xss">
+      <DependentUpon>ZthotelDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet5.xsc">
+      <DependentUpon>ZthotelDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet5.xss">
+      <DependentUpon>ZthotelDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet6.xsc">
+      <DependentUpon>ZthotelDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet6.xss">
+      <DependentUpon>ZthotelDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet7.xsc">
+      <DependentUpon>ZthotelDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet7.xss">
+      <DependentUpon>ZthotelDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet8.xsc">
+      <DependentUpon>ZthotelDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet8.xss">
+      <DependentUpon>ZthotelDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet9.xsc">
+      <DependentUpon>ZthotelDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ZthotelDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZthotelDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZthotelDataSet9.xss">
+      <DependentUpon>ZthotelDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
